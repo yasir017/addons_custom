@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_return_wizard,purchase.return.wizard,model_purchase_return_wizard,,1,1,1,1
+access_purchase_return_wizard_line,purchase.return.wizard.line,model_purchase_return_wizard_line,,1,1,1,1
+access_purchase_return_line,purchase.return.line,model_purchase_return_line,,1,1,1,1
+access_purchase_return_order,purchase.return.order,model_purchase_return_order,,1,1,1,1
+access_purchase_return_order_line,purchase.return.order.line,model_purchase_return_order_line,,1,1,1,1

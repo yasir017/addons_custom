@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="name">res.partner.tree.inherit.total.amount.paid.pos</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="total_amount_paid_pos"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,23 @@
+{
+    "name": "Purchase Return",
+    "version": "16.0.0.0.1",
+    "author": "AppsComp Widget Private Ltd",
+    "live_test_url": "https://www.youtube.com/watch?v=pwD4ogyXDys",
+    "category": "Purchases",
+    'images': ['static/description/banner.png'],
+    "website": "",
+    "depends": ["base", "sale_management", "purchase", "stock", "account"],
+    "license": "LGPL-3",
+    'currency': 'EUR',
+    'price': '33',
+    "summary": "Purchase Return module manages purchase picking return and invoice bill.",
+    "demo": [],
+    "data": [
+        'security/ir.model.access.csv',
+        'views/purchase_return_view.xml',
+        'views/puchase_return_order_view.xml',
+        'views/data.xml',
+    ],
+    "external_dependencies": {},
+    "application": True,
+}

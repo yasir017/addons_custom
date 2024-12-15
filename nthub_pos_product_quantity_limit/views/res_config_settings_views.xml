@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Inherited the res.config setting to add the fields-->
+    <record id="inherited_res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">
+            res.config.settings.view.form.inherit.product.quantity.limit
+        </field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='pos_interface_section']" position="after">
+                <div class="row mt16 o_settings_container">
+                    <h2>Product Quantity Configuration</h2>
+                    <div class="col-12 col-lg-6 o_setting_box" id="product_quantity_limit">
+                        <br/>
+                        <div class="o_setting_left_pane">
+                            <field name="product_quantity_limit"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Product Quantity Limit</span>
+                            <div class="text-muted">Enable if you want to limit product quantity in point of sale or
+                                invoice
+                            </div>
+                            <br/>
+                            <div class="row mt-16"
+                                 attrs="{'invisible': [('product_quantity_limit', '=', False)]}">
+                                <field name="product_quantity_limit_type" widget="radio" options="{'horizontal': true}"
+                                       class="oe_inline"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="o_setting_left_pane">
+                            <field name="is_pos_bill_quantity_limit"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Enable POS Bill Quantity Limit</span>
+                            <div class="text-muted">Enable if you want to limit quantity in point of sale bill
+                            </div>
+                            <br/>
+                            <div class="row mt-16"
+                                 attrs="{'invisible': [('is_pos_bill_quantity_limit', '=', False)]}">
+                                <label for="pos_bill_quantity_limit" string="No of Items"
+                                       class="col-lg-4 o_light_label"/>
+                                <field name="pos_bill_quantity_limit" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
